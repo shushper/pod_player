@@ -222,30 +222,30 @@ class _MobileOverlayBottomControlles extends StatelessWidget {
                 },
               ),
               const Spacer(),
-              MaterialIconButton(
-                toolTipMesg: podCtr.isFullScreen
-                    ? podCtr.podPlayerLabels.exitFullScreen ??
-                        'Exit full screen${kIsWeb ? ' (f)' : ''}'
-                    : podCtr.podPlayerLabels.fullscreen ??
-                        'Fullscreen${kIsWeb ? ' (f)' : ''}',
-                color: itemColor,
-                onPressed: () {
-                  if (podCtr.isOverlayVisible) {
-                    if (podCtr.isFullScreen) {
-                      podCtr.disableFullScreen(context, tag);
-                    } else {
-                      podCtr.enableFullScreen(tag);
-                    }
-                  } else {
-                    podCtr.toggleVideoOverlay();
-                  }
-                },
-                child: Icon(
-                  podCtr.isFullScreen
-                      ? Icons.fullscreen_exit
-                      : Icons.fullscreen,
-                ),
-              ),
+              // MaterialIconButton(
+              //   toolTipMesg: podCtr.isFullScreen
+              //       ? podCtr.podPlayerLabels.exitFullScreen ??
+              //           'Exit full screen${kIsWeb ? ' (f)' : ''}'
+              //       : podCtr.podPlayerLabels.fullscreen ??
+              //           'Fullscreen${kIsWeb ? ' (f)' : ''}',
+              //   color: itemColor,
+              //   onPressed: () {
+              //     if (podCtr.isOverlayVisible) {
+              //       if (podCtr.isFullScreen) {
+              //         podCtr.disableFullScreen(context, tag);
+              //       } else {
+              //         podCtr.enableFullScreen(tag);
+              //       }
+              //     } else {
+              //       podCtr.toggleVideoOverlay();
+              //     }
+              //   },
+              //   child: Icon(
+              //     podCtr.isFullScreen
+              //         ? Icons.fullscreen_exit
+              //         : Icons.fullscreen,
+              //   ),
+              // ),
             ],
           ),
           GetBuilder<PodGetXVideoController>(
